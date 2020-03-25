@@ -16,21 +16,24 @@
   <link rel="stylesheet" href="bundle.css">
 
   <!--font awesome-->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!--Facebook meta data-->
-  <meta property="og:image"
-    content="https://www.facebook.com/photo.php?fbid=10214049685581211&set=a.1411593294875&type=3&theater">
-  <meta property="og:description" content="Ini Etienam - Front-End Developer - Web Developer">
+  <meta property="og:image" content="https://enie.netlify.app/images/">
+  <meta name="og:type" content="website">
+  <meta property="og:description"
+    content="Front-end Dev proficient in JavaScript, Sass, Webpack, Angular and API consumption. A Google Africa Scholar and ALC facilitator. Currently learning fullstack development with React and nodejs.">
   <meta property="og:title" content="Ini Eteienam | Front-end Developer">
 
   <!--Twitter meta data-->
-  <meta name="twitter:card" content="Summary">
+  <meta name="twitter:card" content="Summary_large_image">
   <meta name="twitter:title" content="Ini Etienam | Front-end Developer">
-  <meta name="twitter:description" content="Ini Etienam - Front-End Developer - Web Developer">
+  <meta name="twitter:description"
+    content="Front-end Dev proficient in JavaScript, Sass, Webpack, Angular and API consumption. A Google Africa Scholar and ALC facilitator. Currently learning fullstack development with React and nodejs.">
   <meta name="twitter:site" content="@etienam_ini">
-  <meta name="twitter:image"
-    content="https://www.facebook.com/photo.php?fbid=10214049685581211&set=a.1411593294875&type=3&theater">
+  <meta name="twitter:image" content="https://enie.netlify.app/images/">
+  <meta name="twitter:image:alt" content="Photo of Ini Etienam">
 
   <script type="text/javascript" src="bundle.js" defer></script>
 
@@ -51,6 +54,16 @@
   <!-- Content container -->
   <div class="container">
 
+    <!--overlay content for for mobile nav-->
+    <div class="overlay">
+      <a class="home" href="#">Ini Etienam</a>
+      <a class="closeBtn">x</a>
+      <div class="overlay_content">
+        <a href="#">Work</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
     <!-- Navigation section -->
     <nav>
       <!--LOGO-->
@@ -67,17 +80,19 @@
         </li>
       </ul>
       <!--MOBILE NAV-->
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 172 172"
-        style=" fill:#000000; cursor: pointer;">
-        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
-          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-          <path d="M0,172v-172h172v172z" fill="none"></path>
-          <g fill="#5edfff">
-            <path d="M0,30.96v6.88h172v-6.88zM0,82.56v6.88h172v-6.88zM0,134.16v6.88h172v-6.88z"></path>
+      <a class="mobile_nav">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 172 172"
+          style=" fill:#000000; cursor: pointer;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#5edfff">
+              <path d="M0,30.96v6.88h172v-6.88zM0,82.56v6.88h172v-6.88zM0,134.16v6.88h172v-6.88z"></path>
+            </g>
           </g>
-        </g>
-      </svg>
+        </svg>
+      </a>
 
     </nav>
 
@@ -201,7 +216,7 @@
           </svg>
         </a>
         <a href="https://instagram.com/inietienam" target="_blank">
-          <img src="https://img.icons8.com/office/16/000000/instagram-new.png" alt="instagram icon"/>
+          <img src="https://img.icons8.com/office/16/000000/instagram-new.png" alt="instagram icon" />
         </a>
       </div>
 

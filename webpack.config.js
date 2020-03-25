@@ -77,7 +77,7 @@ module.exports = {
       },
       {
         // now we apply rules for images
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
           {
             // using file-loader for these files

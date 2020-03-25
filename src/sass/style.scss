@@ -9,9 +9,9 @@ $shake-intensity: 2%;
 }
 
 html, body {
-  width: 100%;
+  width: 100%; // set width and height of body to 100%
   height: 100%;
-  margin: $margin;
+  margin: $margin; // position content to fit centrally
   background-color: $ash;
   color: $white;
 }
@@ -20,15 +20,70 @@ html, body {
   display: none;
 }
 
+nav, main {
+  margin-bottom: 1rem;
+}
+
 .container {
-  display: flex;
-  flex-flow: row wrap;
+  display: flex; // set page container to flex
+  flex-flow: row wrap; // prevents all container elements from fitting into one row
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 100%;
+  width: 100%; // sets width of container to body width
+  min-height: 100%; // sets height of container to body height
   max-height: 100%;
   padding: $padding;
+  & .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0; // when width is set to 100, overlay will scroll out from right
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.7s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    & a {
+      padding: 8px;
+      visibility: hidden;
+      opacity: .9;
+      font-size: 2rem;
+      color: $white;
+      display: block; /* Display block instead of inline */
+      transition: 0.5s; /* Transition effects on hover (color) */
+      &:hover,:focus {
+        color: $blue;
+      }
+    }
+    & .closeBtn {
+      position: absolute;
+      color: $blue;
+      top: 20px;
+      right: 15px;
+      font-size: 2rem;
+      text-transform: lowercase;
+    }
+    & .home {
+      position: absolute;
+      top: 20px;
+      left: 45px;
+      font-weight: bold;
+    }
+    & .overlay_content {
+      position: relative;
+      top: 25%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+      & a {
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+    }
+  }
   & a {
     text-decoration: none;
     color: inherit;
@@ -39,7 +94,7 @@ html, body {
     align-items: center;
     align-self: flex-start;
     width: 100%;
-    & svg {
+    & .mobile_nav {
       display: none;
       @media all and (max-width: 740px) {
         display: block;
