@@ -14,11 +14,11 @@ module.exports = {
 
   // not to be used for production because it slows down build and rebuild.
   // comment the line when production building
-  devtool: 'inline-source-map',
+  /*devtool: 'inline-source-map',
 
   devServer: {
     contentBase: './dist',
-  },
+  },*/
 
   // path to filename of result bundle
   // webpack will bundle all javascript into this file

@@ -17,7 +17,26 @@ html, body {
 }
 
 .onLoad {
-  display: none;
+  width: 100%;
+  visibility: hidden;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: $white;
+  color: $ash;
+  font-weight: bold;
+  overflow-x: hidden;
+  transition: 0.7s;
+  & h1 {
+    transition: 0.9s;
+    font-size: 2rem;
+    opacity: 0;
+  }
 }
 
 nav, main {
@@ -62,7 +81,7 @@ nav, main {
       color: $blue;
       top: 20px;
       right: 15px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-transform: lowercase;
     }
     & .home {
@@ -103,6 +122,9 @@ nav, main {
     & .logo {
       margin-left: 3rem;
       margin-right: auto;
+      @media all and (max-width: 450px) {
+        margin-left: 1rem;
+      }
     }
     & .nav_links {
       list-style-type: none;
@@ -115,6 +137,7 @@ nav, main {
     }
     & .nav_link {
       padding: 0 1rem;
+      font-weight: bold;
     }
   }
   & main {
