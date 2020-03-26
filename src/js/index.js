@@ -6,6 +6,8 @@ const closeBtn = document.querySelector('.closeBtn');
 const mobileMenu = document.querySelector('.mobile_nav');
 const onLoad = document.querySelector('.onLoad');
 const onLoadText = document.querySelector('.onLoad h1');
+const contactLinks = document.querySelectorAll('.contact');
+const workLinks = document.querySelectorAll('.work');
 
 mobileMenu.addEventListener('click', () => {
   overlay.style.width = '100%'; // set width to draw out overlay
@@ -51,3 +53,22 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
   });
 };
 
+window.addEventListener('load', () => {
+  if (document.title.startsWith('C')) {
+    contactLinks.forEach(link => {
+      link.style.color = '#5edfff';
+    });
+    workLinks.forEach(link => {
+      link.style.color = '#ffffff';
+      link.style.opacity = '.9';
+    });
+  } else if (document.title.startsWith('P')) {
+    workLinks.forEach(link => {
+      link.style.color = '#5edfff';
+    });
+    contactLinks.forEach(link => {
+      link.style.color = '#ffffff';
+      link.style.opacity = '.9';
+    });
+  }
+})
