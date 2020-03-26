@@ -208,20 +208,5 @@ nav, main {
   & .skills {
     color: $footerText;
   }
-  & .button_group {
-    & button {
-      outline: 0;
-      border-style: solid;
-      border-color: $blue;
-      background-color: inherit;
-      border-radius: 3px;
-      width: 70px;
-      height: 30px;
-      & a {
-        text-transform: capitalize;
-        color: $white;
-      }
-    }
-  }
 }
 

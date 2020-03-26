@@ -25,18 +25,30 @@ closeBtn.addEventListener('click', () => {
   overlay.style.width = '0';
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  onLoad.style.visibility = 'visible'; //make load page appear
-  //then display text after 3ms
-  setTimeout(() => {
-    onLoadText.style.opacity = '1';
-  }, 300);
-  // wait 1700s after page loads then remove text content from onload hover page
-  setTimeout(() => {
-    onLoadText.style.opacity = '0';
-  }, 1700);
-  // wait 2 seconds after page loads then remove onload hover page
-  setTimeout(() => {
-    onLoad.style.width = '0';
-  }, 2000);
-});
+if (window.performance.navigation.type === 1 || document.title.startsWith('I')) {// checks if the page was refreshed
+  window.addEventListener('DOMContentLoaded', () => {
+    onLoad.style.visibility = 'visible'; //make load page appear
+    //then display text after 3ms
+    setTimeout(() => {
+      onLoadText.style.opacity = '.9';
+    }, 300);
+    // wait 1700s after page loads then remove text content from onload hover page
+    setTimeout(() => {
+      onLoadText.style.opacity = '0';
+    }, 1700);
+    // wait 2 seconds after page loads then remove onload hover page
+    setTimeout(() => {
+      onLoad.style.width = '0';
+    }, 2000);
+  });
+} else {
+  window.addEventListener('DOMContentLoaded', () => {
+    onLoad.style.visibility = 'visible'; //make load page appear
+
+    // wait less than half a second after page loads then remove onload hover page
+    setTimeout(() => {
+      onLoad.style.width = '0';
+    }, 400);
+  });
+};
+
