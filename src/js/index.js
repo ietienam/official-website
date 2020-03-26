@@ -44,7 +44,6 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
 } else {
   window.addEventListener('DOMContentLoaded', () => {
     onLoad.style.visibility = 'visible'; //make load page appear
-
     // wait less than half a second after page loads then remove onload hover page
     setTimeout(() => {
       onLoad.style.width = '0';
