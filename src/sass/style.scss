@@ -64,6 +64,9 @@ nav, main {
     background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.7s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    @media all and (min-width: 741px) {
+      display: none;
+    }
     & a {
       padding: 8px;
       visibility: hidden;
@@ -89,6 +92,10 @@ nav, main {
       top: 20px;
       left: 45px;
       font-weight: bold;
+      @media all and (max-width: 380px) {
+        margin-left: .03rem;
+        margin-right: auto;
+      }
     }
     & .overlay_content {
       position: relative;
