@@ -1,4 +1,6 @@
 import '../sass/style.scss';
+import myImage from '../assets/images/ini.jpg';
+import sasuke from '../assets/images/sasuke.jpg';
 
 const overlay = document.querySelector('.overlay');
 const overlayLinks = document.querySelectorAll('.overlay a');
@@ -9,6 +11,13 @@ const onLoadText = document.querySelector('.onLoad h1');
 const contactLinks = document.querySelectorAll('.contact');
 const workLinks = document.querySelectorAll('.work');
 const homeLinks = document.querySelectorAll('.home');
+const sasukeImg = document.querySelector('.sasuke');
+
+sasukeImg.src = sasuke;
+sasukeImg.style.width = '100%';
+sasukeImg.style.opacity = '.3';
+sasukeImg.style.height = '70%';
+sasukeImg.style.overflow = 'hidden';
 
 mobileMenu.addEventListener('click', () => {
   overlay.style.width = '100%'; // set width to draw out overlay

@@ -101,6 +101,8 @@ nav, main {
       position: relative;
       top: 25%; /* 25% from the top */
       width: 100%; /* 100% width */
+      height: 100%;
+      overflow: hidden;
       text-align: center; /* Centered text/links */
       margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
       & a {
