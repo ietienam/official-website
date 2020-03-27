@@ -16,7 +16,7 @@ const sasukeImg = document.querySelector('.sasuke');
 sasukeImg.src = sasuke;
 sasukeImg.style.width = '100%';
 sasukeImg.style.opacity = '.3';
-sasukeImg.style.height = '70%';
+sasukeImg.style.height = '55%';
 sasukeImg.style.overflow = 'hidden';
 
 mobileMenu.addEventListener('click', () => {
@@ -74,7 +74,7 @@ window.addEventListener('load', () => {
     homeLinks.forEach(link => {
       link.style.color = '#ffffff';
     });
-  } 
+  }
   else if (document.title.startsWith('P')) {
     workLinks.forEach(link => {
       link.style.color = '#5edfff';
