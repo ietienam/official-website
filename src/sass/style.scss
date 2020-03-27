@@ -210,6 +210,9 @@ nav, main {
       margin-right: .03rem;
       height: 100%;
       align-self: center;
+      & small {
+        font-size: .65rem;
+      }
     }
   }
 }
