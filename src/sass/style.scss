@@ -75,7 +75,7 @@ nav, main {
       color: $white;
       display: block; /* Display block instead of inline */
       transition: 0.5s; /* Transition effects on hover (color) */
-      &:hover,:focus {
+      &:hover, &:focus, &:active {
         color: $blue;
       }
     }
@@ -92,7 +92,7 @@ nav, main {
       top: 20px;
       left: 10px;
       font-weight: bold;
-      font-size: 6vw;
+      font-size: 5vw;
       @media all and (max-width: 380px) {
         margin-left: .03rem;
         margin-right: auto;
@@ -135,8 +135,7 @@ nav, main {
       @media all and (max-width: 450px) {
         margin-left: .03rem;
       }
-      &:hover, :focus {
-        color: $blue;
+      &:hover, &:focus, &:active {
         border-bottom: thin solid $pink;
       }
     }
@@ -152,8 +151,7 @@ nav, main {
     & .nav_link {
       padding: 0 1rem;
       font-weight: bold;
-      &:hover, :focus {
-        color: $blue;
+      &:hover, &:focus, &:active {
         border-bottom: thin solid $pink;
       }
     }
@@ -163,6 +161,11 @@ nav, main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    & .skills {
+      color: $footerText;
+      font-size: 2.2vw;
+      text-align: right;
+    }
     & .spacer {
       padding-right: 1rem;
     }
@@ -197,7 +200,7 @@ nav, main {
       align-items: center;
       & .fa-github {
         color: $white;
-        margin-bottom: .5rem;
+        opacity: .9;
       }
       & a {
         margin-right: .5rem;
@@ -207,14 +210,7 @@ nav, main {
       margin-right: .03rem;
       height: 100%;
       align-self: center;
-      & small {
-        font-size: 1vw;
-      }
     }
-  }
-  & .skills {
-    color: $footerText;
-    font-size: 1.9vw;
   }
 }
 
