@@ -61,7 +61,7 @@ nav, main {
     right: 0; // when width is set to 100, overlay will scroll out from right
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
     overflow: hidden; /* Disable horizontal scroll */
     transition: 0.7s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
     @media all and (min-width: 741px) {
@@ -71,7 +71,7 @@ nav, main {
       padding: 8px;
       visibility: hidden;
       opacity: .9;
-      font-size: 2rem;
+      font-size: 5vw;
       color: $white;
       display: block; /* Display block instead of inline */
       transition: 0.5s; /* Transition effects on hover (color) */
@@ -83,16 +83,16 @@ nav, main {
       position: absolute;
       color: $blue;
       top: 20px;
-      right: 15px;
-      font-size: 1.5rem;
+      right: 10px;
+      font-size: 5vw;
       text-transform: lowercase;
     }
     & .home {
       position: absolute;
       top: 20px;
-      left: 45px;
+      left: 10px;
       font-weight: bold;
-      font-size: 1.7rem;
+      font-size: 6vw;
       @media all and (max-width: 380px) {
         margin-left: .03rem;
         margin-right: auto;
@@ -133,7 +133,7 @@ nav, main {
       margin-left: 3rem;
       margin-right: auto;
       @media all and (max-width: 450px) {
-        margin-left: 1rem;
+        margin-left: .03rem;
       }
       &:hover, :focus {
         color: $blue;
@@ -168,7 +168,7 @@ nav, main {
     }
     & .text_shadow {
       cursor: default;
-      font-size: 3rem;
+      font-size: 5vw;
       margin: 0;
       padding: 0;
       text-shadow: -3px 0px 0px $pink;
@@ -177,25 +177,10 @@ nav, main {
     }
     & .text {
       cursor: default;
-      font-size: 3rem;
+      font-size: 5vw;
       font-weight: bolder;
       margin: 0;
       padding: 0;
-      @media all and (max-width: 740px) {
-        font-size: 2rem;
-      }
-      @media all and (max-width: 500px) {
-        font-size: 1.5rem;
-        font-weight: normal;
-      }
-      @media all and (max-height: 370px) {
-        font-weight: normal;
-        font-size: 1.5rem;
-      }
-      @media all and (max-height: 350px) {
-        font-weight: normal;
-        font-size: 1rem;
-      }
     }
   }
   & footer {
@@ -206,7 +191,7 @@ nav, main {
     align-items: flex-end;
     width: 100%;
     & .icon_group {
-      margin-left: .5rem;
+      margin-left: .03rem;
       margin-right: auto;
       display: flex;
       align-items: center;
@@ -219,12 +204,17 @@ nav, main {
       }
     }
     & div {
-      margin-right: 2rem;
-      align-self: flex-end;
+      margin-right: .03rem;
+      height: 100%;
+      align-self: center;
+      & small {
+        font-size: 1vw;
+      }
     }
   }
   & .skills {
     color: $footerText;
+    font-size: 1.9vw;
   }
 }
 

@@ -15,7 +15,7 @@ const sasukeImg = document.querySelector('.sasuke');
 
 sasukeImg.src = sasuke;
 sasukeImg.style.width = '100%';
-sasukeImg.style.opacity = '.3';
+sasukeImg.style.opacity = '.9';
 sasukeImg.style.height = '55%';
 sasukeImg.style.overflow = 'hidden';
 
