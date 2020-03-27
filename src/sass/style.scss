@@ -92,6 +92,7 @@ nav, main {
       top: 20px;
       left: 45px;
       font-weight: bold;
+      font-size: 1.7rem;
       @media all and (max-width: 380px) {
         margin-left: .03rem;
         margin-right: auto;
@@ -108,7 +109,7 @@ nav, main {
       & a {
         margin-bottom: 1.5rem;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
   }
