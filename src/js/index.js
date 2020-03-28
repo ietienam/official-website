@@ -1,5 +1,4 @@
 import '../sass/style.scss';
-import myImage from '../assets/images/ini.jpg';
 import sasuke from '../assets/images/sasuke.jpg';
 
 const overlay = document.querySelector('.overlay');
