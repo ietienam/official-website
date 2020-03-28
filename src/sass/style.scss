@@ -18,7 +18,7 @@ html, body {
 
 .onLoad {
   width: 100%;
-  visibility: hidden;
+  opacity: 0;
   height: 100%;
   position: fixed;
   display: flex;
@@ -69,8 +69,7 @@ nav, main {
     }
     & a {
       padding: 8px;
-      visibility: hidden;
-      opacity: .9;
+      opacity: 0;
       font-size: 5vw;
       color: $white;
       display: block; /* Display block instead of inline */

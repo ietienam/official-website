@@ -24,22 +24,22 @@ mobileMenu.addEventListener('click', () => {
   // waith half a second after overlay comes out and display contents
   setTimeout(() => {
     overlayLinks.forEach(link => {
-      link.style.visibility = 'visible';
+      link.style.opacity = '.9';
     });
-  }, 500);
+  }, 400);
 });
 
 closeBtn.addEventListener('click', () => {
   // hide overlay content then close overlay
   overlayLinks.forEach(link => {
-    link.style.visibility = 'hidden';
+    link.style.opacity = '0';
   });
   overlay.style.width = '0';
 });
 
 if (window.performance.navigation.type === 1 || document.title.startsWith('I')) {// checks if the page was refreshed
   window.addEventListener('DOMContentLoaded', () => {
-    onLoad.style.visibility = 'visible'; //make load page appear
+    onLoad.style.opacity = '1'; //make load page appear
     //then display text after 3ms
     setTimeout(() => {
       onLoadText.style.opacity = '.9';
@@ -51,14 +51,20 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
     // wait 2 seconds after page loads then remove onload hover page
     setTimeout(() => {
       onLoad.style.width = '0';
+      setTimeout(() => {
+      onLoad.style.opacity = '0';
+      }, 230);
     }, 2000);
   });
 } else {
   window.addEventListener('DOMContentLoaded', () => {
-    onLoad.style.visibility = 'visible'; //make load page appear
+    onLoad.style.opacity = '1'; //make load page appear
     // wait less than half a second after page loads then remove onload hover page
     setTimeout(() => {
       onLoad.style.width = '0';
+      setTimeout(() => {
+      onLoad.style.opacity = '0';
+      }, 300);
     }, 400);
   });
 };
