@@ -53,7 +53,7 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
       onLoad.style.width = '0';
       setTimeout(() => {
       onLoad.style.opacity = '0';
-      }, 230);
+      }, 300);
     }, 2000);
   });
 } else {
@@ -73,23 +73,13 @@ window.addEventListener('load', () => {
   if (document.title.startsWith('C')) {
     contactLinks.forEach(link => {
       link.style.color = '#5edfff';
-    });
-    workLinks.forEach(link => {
-      link.style.color = '#ffffff';
-    });
-    homeLinks.forEach(link => {
-      link.style.color = '#ffffff';
+      link.style.borderBottom = '3px solid #fb3569';
     });
   }
   else if (document.title.startsWith('P')) {
     workLinks.forEach(link => {
       link.style.color = '#5edfff';
-    });
-    contactLinks.forEach(link => {
-      link.style.color = '#ffffff';
-    });
-    homeLinks.forEach(link => {
-      link.style.color = '#ffffff';
+      link.style.borderBottom = '3px solid #fb3569';
     });
   }
   else {
