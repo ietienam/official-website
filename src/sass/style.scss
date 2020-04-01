@@ -288,6 +288,42 @@ nav, main {
     background-color: inherit;
     cursor: pointer;
     height: 30px;
+    margin-bottom: 15px;
     width: 55px;
+  }
+}
+
+.project_list {
+  margin-top: 1rem;
+  & > div {
+    margin-bottom: 1rem;
+    border-left: 3px solid $blue;
+    background-color: #44444a;
+    padding: $padding;
+    & .name p {
+      color: $footerText;
+    }
+    & p {
+      font-size: 1.2rem;
+    }
+    & button {
+      cursor: pointer;
+    }
+    & .code {
+      background-color: inherit;
+      color: $blue;
+      border: thin solid $blue;
+      outline: 0;
+      padding: .5rem;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+    & .page {
+      background-color: $blue;
+      border: 0;
+      border-radius: 5px;
+      outline: 0;
+      padding: .5rem;
+    }
   }
 }

@@ -14,14 +14,14 @@ module.exports = {
 
   // not to be used for production because it slows down build and rebuild.
   // comment the line when production building
-  devtool: 'inline-source-map',
+  //devtool: 'inline-source-map',
 
   //production source maps
-  //devtool: 'source-map',
+  devtool: 'source-map',
 
-  devServer: {
+  /*devServer: {
     contentBase: './dist',
-  },
+  },*/
 
   // path to filename of result bundle
   // webpack will bundle all javascript into this file
@@ -34,7 +34,7 @@ module.exports = {
   // depending on mode, webpack will apply different things
   // on final bundle. for now we don't need production's javascript
   // minifying and other things so lets set mode to development
-  mode: 'development',
+  mode: 'production',
 
   module: {
     rules: [
@@ -72,7 +72,7 @@ module.exports = {
           {
             // first we transform sass to standard css
             loader: "sass-loader",
-            options : {
+            options: {
               implementation: require("sass")
             }
           }
