@@ -4,7 +4,7 @@
 <head>
   <link rel="preload" href="bundle.css" as="style">
   <link rel="preload" href="bundle.js" as="script">
-  
+
   <!--prefetch other page data-->
   <link rel="prefetch" href="contact.html" as="document">
   <link rel="prefetch" href="work.html" as="document">
@@ -35,7 +35,7 @@
   <meta name="og:type" content="website">
   <meta property="og:description"
     content="Front-end Dev proficient in JavaScript, Sass, Webpack, Angular and API consumption. A Google Africa Scholar and ALC facilitator. Currently learning fullstack development with React and nodejs.">
-  <meta property="og:title" content="Ini Eteienam | Front-end Developer">
+  <meta property="og:title" content="Ini Etienam | Front-end Developer">
 
   <!--Twitter meta data-->
   <meta name="twitter:card" content="Summary_large_image">
@@ -90,7 +90,7 @@
       <div class="overlay_content">
         <a class="work" href="work.html">Work</a>
         <a class="contact" href="contact.html">Contact</a>
-        <img class="sasuke" src="">
+        <img class="sasuke" src="" alt="">
       </div>
     </div>
 
@@ -259,6 +259,15 @@
 
   </div>
 
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('./sw.js')
+      .then(() => {
+        console.log('Service Worker Registered');
+      });
+    }
+  </script>
 </body>
 
 </html>
