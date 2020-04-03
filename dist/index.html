@@ -259,19 +259,6 @@
 
   </div>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../src/js/sw.js')
-        .then(swReg => {
-          console.log('Service Worker is registered', swReg);
-        })
-        .catch(err => {
-          console.log('Service Worker Error', err);
-        });
-      });
-    }
-  </script>
 </body>
 
 </html>
