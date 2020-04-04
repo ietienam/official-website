@@ -41,17 +41,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: [
-          {
-            loader: "cache-loader"
-          },
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env']
-            }
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
           }
-        ]
+        }
       },
       {
         // apply rule for .sass, scss or .css files
@@ -61,9 +56,6 @@ module.exports = {
         // loaders are applied from right to left(bottom to top)
         // the first loader will be applied after the others
         use: [
-          {
-            loader: "cache-loader"
-          },
           {
             // after all css loaders we use plugins to do this work
             // it gets all transformed css and extracts it into a single bundled file
@@ -90,9 +82,6 @@ module.exports = {
         // now we apply rules for images
         test: /\.(png|jpe?g|gif|svg)$/,
         use: [
-          {
-            loader: "cache-loader"
-          },
           {
             // using file-loader for these files
             loader: "file-loader",
