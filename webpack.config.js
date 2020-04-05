@@ -1,6 +1,8 @@
 // webpack uses this to work with directories
 const path = require('path');
 
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
 // to extract all transformed css into seperate file
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -98,6 +100,29 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "bundle.css"
+    }),
+    new WorkboxPlugin.GenerateSW({
+      // Do not precache images
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+      // Define runtime caching rules.
+      runtimeCaching: [{
+        // Match any request that ends with .png, .jpg, .jpeg or .svg.
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+        // Apply a cache-first strategy.
+        handler: 'CacheFirst',
+
+        options: {
+          // Use a custom cache name.
+          cacheName: 'images',
+
+          // Only cache 10 images.
+          expiration: {
+            maxEntries: 10,
+          },
+        },
+      }],
     }),
   ]
 
