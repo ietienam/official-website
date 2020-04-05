@@ -1,6 +1,14 @@
 import '../sass/style.scss';
 import sasuke from '../assets/images/sasuke.jpg';
 
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+};
+
 const overlay = document.querySelector('.overlay');
 const overlayLinks = document.querySelectorAll('.overlay a');
 const closeBtn = document.querySelector('.closeBtn');
