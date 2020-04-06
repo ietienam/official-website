@@ -10,7 +10,15 @@ if ('serviceWorker' in navigator) {
       console.log('SW registration failed: ', registrationError);
     });
   });
-}
+};
+
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
+  new RegExp('\\.(?:js|css|html)$'),
+  new StaleWhileRevalidate()
+);
 
 const overlay = document.querySelector('.overlay');
 const overlayLinks = document.querySelectorAll('.overlay a');
