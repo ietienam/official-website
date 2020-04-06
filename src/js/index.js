@@ -3,11 +3,14 @@ import sasuke from '../assets/images/sasuke.jpg';
 
 // Check that service workers are supported
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
+    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
   });
-};
+}
 
 const overlay = document.querySelector('.overlay');
 const overlayLinks = document.querySelectorAll('.overlay a');
@@ -59,7 +62,7 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
     setTimeout(() => {
       onLoad.style.width = '0';
       setTimeout(() => {
-      onLoad.style.opacity = '0';
+        onLoad.style.opacity = '0';
       }, 300);
     }, 2000);
   });
@@ -70,7 +73,7 @@ if (window.performance.navigation.type === 1 || document.title.startsWith('I')) 
     setTimeout(() => {
       onLoad.style.width = '0';
       setTimeout(() => {
-      onLoad.style.opacity = '0';
+        onLoad.style.opacity = '0';
       }, 300);
     }, 400);
   });
