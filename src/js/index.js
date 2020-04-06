@@ -16,9 +16,20 @@ import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('\\.(?:js|css|html)$'),
+  new RegExp('\\.(?:js|css)$'),
   new StaleWhileRevalidate()
 );
+
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {url: '/index.html', revision: '1234' },
+  {url: '/work.html', revision: '1234'},
+  {url: '/contact.html', revision: '1234'},
+  {url: '/bundle.css', revision: '1234'},
+  {url: '/bundle.js', revision: '1234'},
+  // ... other entries ...
+]);
 
 const overlay = document.querySelector('.overlay');
 const overlayLinks = document.querySelectorAll('.overlay a');
