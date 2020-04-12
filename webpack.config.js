@@ -104,7 +104,7 @@ module.exports = {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
-      
+
       // Do not precache images
       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
 
