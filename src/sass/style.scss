@@ -92,7 +92,7 @@ nav, main {
       position: absolute;
       top: 20px;
       left: 10px;
-      font-family: 'Satisfy', cursive;
+      font-family: 'Satisfy', cursive !important;
       font-weight: bold;
       font-size: 5vw;
       @media all and (max-width: 380px) {
