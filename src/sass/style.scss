@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
 $ash: #444444; $white: #ffffff;
 $blue: #5edfff; $pink: #fb3569; $footerText: #8d8d8d;
@@ -92,7 +92,6 @@ nav, main {
       position: absolute;
       top: 20px;
       left: 10px;
-      font-family: 'Satisfy', cursive !important;
       font-weight: bold;
       font-size: 5vw;
       @media all and (max-width: 380px) {
@@ -136,7 +135,6 @@ nav, main {
     & .logo {
       margin-left: 3rem;
       margin-right: auto;
-      font-family: 'Satisfy', cursive !important;
       &::after {
         display: block;
         content: "";
